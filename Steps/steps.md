@@ -23,7 +23,7 @@ Make a state amountInFromCurrency and exchangeRate.
 In the initial useEffect set the first currency.
 let toAmount, fromAmount;
 if (amountInFromCurrency) {
-fromAmount = amountInFromCurrency;
+fromAmount = amount;
 toAmount = amount \* exchangeRate;
 } else {
 toAmount = amount;
@@ -34,4 +34,15 @@ Pass these above values down as amount to CurrencyRow and set to the value to di
 ## Step 4
 
 StartTime: 21:50
-EndTIme:
+EndTIme: 23:30
+
+Make it so we can update inputs. make an onChange function for the input.
+This onChange can call either handleToAmountChange or handleFromAmountChange depending on the input
+
+## Step 5
+
+StartTime: 23:30
+
+Need to update the currency amount when the select is changed
+Add another useEffect. When fromCurrency or toCurrency changes need to make another fetch request. fetch(`${BASE_URL}?base=${fromCurrency}&symbols=${toCurrency}`)
+Need to get the returned data and setExchangeRate. Need to do a check first to see if values.

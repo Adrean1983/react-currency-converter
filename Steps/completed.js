@@ -1,56 +1,6 @@
-const solution1 = {
-  //   // App
-  //   import React, { useEffect, useState } from "react";
-  // import "./App.css";
-  // import CurrencyRow from "./CurrencyRow";
-  // const BASE_URL = "https://api.exchangeratesapi.io/latest";
-  // function App() {
-  //   const [currencyOptions, setCurrencyOptions] = useState([]);
-  //   useEffect(() => {
-  //     fetch(BASE_URL)
-  //       .then(res => res.json())
-  //       .then(data => {
-  //         setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
-  //       });
-  //   }, []);
-  //   return (
-  //     <>
-  //       <h1>Convert</h1>
-  //       <CurrencyRow currencyOptions={currencyOptions} />
-  //       <div className="equals">=</div>
-  //       <CurrencyRow currencyOptions={currencyOptions} />
-  //     </>
-  //   );
-  // }
-  // export default App;
-  // // CurrencyRow.js
-  // import React from "react";
-  // const CurrencyRow = props => {
-  //   const { currencyOptions } = props;
-  //   return (
-  //     <div>
-  //       <input type="number" className="input" />
-  //       <select>
-  //         {currencyOptions.map(option => {
-  //           return (
-  //             <option key={option} value={option}>
-  //               {option}
-  //             </option>
-  //           );
-  //         })}
-  //       </select>
-  //     </div>
-  //   );
-  // };
-  // export default CurrencyRow;
-};
-const solution2 = {};
-const solution3 = {};
-const solution4 = {};
-const solution5 = {};
 const Completed = {
-  //   // App
-  //   import React, { useEffect, useState } from "react";
+  //   //   // App
+  //  import React, { useEffect, useState } from "react";
   // import "./App.css";
   // import CurrencyRow from "./CurrencyRow";
   // const BASE_URL = "https://api.exchangeratesapi.io/latest";
@@ -61,10 +11,9 @@ const Completed = {
   //   const [exchangeRate, setExchangeRate] = useState();
   //   const [amount, setAmount] = useState(1);
   //   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
-  //   console.log(exchangeRate);
   //   let toAmount, fromAmount;
   //   if (amountInFromCurrency) {
-  //     fromAmount = toAmount;
+  //     fromAmount = amount;
   //     toAmount = amount * exchangeRate;
   //   } else {
   //     toAmount = amount;
@@ -87,7 +36,7 @@ const Completed = {
   //         .then(res => res.json())
   //         .then(data => setExchangeRate(data.rates[toCurrency]));
   //     }
-  //   }, [fromAmount, toCurrency]);
+  //   }, [fromCurrency, toCurrency]);
   //   function handleFromAmountChange(e) {
   //     setAmount(e.target.value);
   //     setAmountInFromCurrency(true);
@@ -118,7 +67,7 @@ const Completed = {
   //   );
   // }
   // export default App;
-  // Currency Row
+  // // CurrencyRow
   // import React from "react";
   // const CurrencyRow = props => {
   //   const { currencyOptions, selectedCurrency, onChangeCurrency, amount, onChangeAmount } = props;
@@ -126,11 +75,13 @@ const Completed = {
   //     <div>
   //       <input type="number" className="input" value={amount} onChange={onChangeAmount} />
   //       <select value={selectedCurrency} onChange={onChangeCurrency}>
-  //         {currencyOptions.map(option => (
-  //           <option key={option} value={option}>
-  //             {option}
-  //           </option>
-  //         ))}
+  //         {currencyOptions.map(option => {
+  //           return (
+  //             <option key={option} value={option}>
+  //               {option}
+  //             </option>
+  //           );
+  //         })}
   //       </select>
   //     </div>
   //   );
